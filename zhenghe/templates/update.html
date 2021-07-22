@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/house/update/" method="post">
+        {% csrf_token%}
+        <input type="hidden" name="id" value="{{houseInfo.id}}" />
+        <label>房产标题：</label><input type="text" name="title" value="{{houseInfo.housetitle}}" /><br/>
+        <label>房产地址：</label><input type="radio" name="address" value="{{houseInfo.housetitle}}" /><br/>
+        <label>房产价格：</label><input type="text" name="price" value="{{houseInfo.houseprice}}" /><br/>
+        <label>房产描述：</label><input type="text" name="description"  value="{{houseInfo.housedescription}}"/><br/>
+        <input type="submit" value="修改房产信息" />
+    </form>
+</body>
+</html>
